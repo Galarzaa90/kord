@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>GuildScheduledEventCreateRequest</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>kord</span>            </a>    </div>
+    <div>0.8.x-SNAPSHOT
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="rest::dev.kord.rest.json.request/GuildScheduledEventCreateRequest///PointingToDeclaration//142466484">
+  <div class="breadcrumbs"><a href="../../index.html">rest</a><span class="delimiter">/</span><a href="../index.html">dev.kord.rest.json.request</a><span class="delimiter">/</span><a href="index.html">GuildScheduledEventCreateRequest</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Guild</span><wbr><span>Scheduled</span><wbr><span>Event</span><wbr><span>Create</span><wbr><span><span>Request</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">data </span><span class="token keyword">class </span><a href="index.html">GuildScheduledEventCreateRequest</a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>channelId<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional-snowflake/index.html">OptionalSnowflake</a><span class="token operator"> = </span>OptionalSnowflake.Missing<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>entityMetadata<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../common/dev.kord.common.entity/-guild-scheduled-event-entity-metadata/index.html">GuildScheduledEventEntityMetadata</a><span class="token operator">&gt;</span><span class="token operator"> = </span>Optional.Missing()<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>privacyLevel<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity/-guild-scheduled-event-privacy-level/index.html">GuildScheduledEventPrivacyLevel</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>scheduledStartTime<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>scheduledEndTime<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token operator">&gt;</span><span class="token operator"> = </span>Optional.Missing()<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>description<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>Optional.Missing()<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>entityType<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity/-scheduled-entity-type/index.html">ScheduledEntityType</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;<span class="token keyword">val </span>image<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>Optional.Missing()</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Sources">Sources</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="2125754809%2FConstructors%2F142466484" anchor-label="GuildScheduledEventCreateRequest" id="2125754809%2FConstructors%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-guild-scheduled-event-create-request.html"><span>Guild</span><wbr><span>Scheduled</span><wbr><span>Event</span><wbr><span>Create</span><wbr><span><span>Request</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2125754809%2FConstructors%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-guild-scheduled-event-create-request.html"><span class="token function">GuildScheduledEventCreateRequest</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;channelId<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional-snowflake/index.html">OptionalSnowflake</a><span class="token operator"> = </span>OptionalSnowflake.Missing<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;entityMetadata<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../common/dev.kord.common.entity/-guild-scheduled-event-entity-metadata/index.html">GuildScheduledEventEntityMetadata</a><span class="token operator">&gt;</span><span class="token operator"> = </span>Optional.Missing()<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;privacyLevel<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity/-guild-scheduled-event-privacy-level/index.html">GuildScheduledEventPrivacyLevel</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;scheduledStartTime<span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;scheduledEndTime<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token operator">&gt;</span><span class="token operator"> = </span>Optional.Missing()<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;description<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>Optional.Missing()<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;entityType<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity/-scheduled-entity-type/index.html">ScheduledEntityType</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;image<span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="token operator"> = </span>Optional.Missing()</span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-609866288%2FProperties%2F142466484" anchor-label="channelId" id="-609866288%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="channel-id.html"><span>channel</span><wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-609866288%2FProperties%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="-609866288%2FProperties%2F142466484" anchor-label="channelId" id="-609866288%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="channel-id.html">channelId</a><span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional-snowflake/index.html">OptionalSnowflake</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2030635822%2FProperties%2F142466484" anchor-label="description" id="-2030635822%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="description.html"><span><span>description</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2030635822%2FProperties%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="-2030635822%2FProperties%2F142466484" anchor-label="description" id="-2030635822%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="description.html">description</a><span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-162309990%2FProperties%2F142466484" anchor-label="entityMetadata" id="-162309990%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="entity-metadata.html"><span>entity</span><wbr><span><span>Metadata</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-162309990%2FProperties%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="-162309990%2FProperties%2F142466484" anchor-label="entityMetadata" id="-162309990%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="entity-metadata.html">entityMetadata</a><span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../common/dev.kord.common.entity/-guild-scheduled-event-entity-metadata/index.html">GuildScheduledEventEntityMetadata</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1233964271%2FProperties%2F142466484" anchor-label="entityType" id="1233964271%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="entity-type.html"><span>entity</span><wbr><span><span>Type</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1233964271%2FProperties%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="1233964271%2FProperties%2F142466484" anchor-label="entityType" id="1233964271%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="entity-type.html">entityType</a><span class="token operator">: </span><a href="../../../common/dev.kord.common.entity/-scheduled-entity-type/index.html">ScheduledEntityType</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-881587949%2FProperties%2F142466484" anchor-label="image" id="-881587949%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="image.html"><span><span>image</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-881587949%2FProperties%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="-881587949%2FProperties%2F142466484" anchor-label="image" id="-881587949%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="image.html">image</a><span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1461904607%2FProperties%2F142466484" anchor-label="name" id="-1461904607%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="name.html"><span><span>name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1461904607%2FProperties%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="-1461904607%2FProperties%2F142466484" anchor-label="name" id="-1461904607%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="name.html">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="27698928%2FProperties%2F142466484" anchor-label="privacyLevel" id="27698928%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="privacy-level.html"><span>privacy</span><wbr><span><span>Level</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="27698928%2FProperties%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="27698928%2FProperties%2F142466484" anchor-label="privacyLevel" id="27698928%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="privacy-level.html">privacyLevel</a><span class="token operator">: </span><a href="../../../common/dev.kord.common.entity/-guild-scheduled-event-privacy-level/index.html">GuildScheduledEventPrivacyLevel</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1085645743%2FProperties%2F142466484" anchor-label="scheduledEndTime" id="-1085645743%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="scheduled-end-time.html"><span>scheduled</span><wbr><span>End</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1085645743%2FProperties%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="-1085645743%2FProperties%2F142466484" anchor-label="scheduledEndTime" id="-1085645743%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="scheduled-end-time.html">scheduledEndTime</a><span class="token operator">: </span><a href="../../../common/dev.kord.common.entity.optional/-optional/index.html">Optional</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="925137706%2FProperties%2F142466484" anchor-label="scheduledStartTime" id="925137706%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="scheduled-start-time.html"><span>scheduled</span><wbr><span>Start</span><wbr><span><span>Time</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="925137706%2FProperties%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="925137706%2FProperties%2F142466484" anchor-label="scheduledStartTime" id="925137706%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="scheduled-start-time.html">scheduledStartTime</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.datetime/Instant///PointingToDeclaration/">Instant</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Sources</h2>
+      <div class="table" data-togglable="Sources"><a data-name="-418716141%2FSource%2F142466484" anchor-label="https://github.com/kordlib/kord/blob/9a4e3e1dab2a2aa693b3f24303bd22e46ab549fa/rest/src/main/kotlin//json/request/ScheduledEventRequests.kt#L13" id="-418716141%2FSource%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="https://github.com/kordlib/kord/blob/9a4e3e1dab2a2aa693b3f24303bd22e46ab549fa/rest/src/main/kotlin//json/request/ScheduledEventRequests.kt#L13">jvm source</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-418716141%2FSource%2F142466484"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

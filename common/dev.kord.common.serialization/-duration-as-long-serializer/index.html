@@ -1,0 +1,215 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>DurationAsLongSerializer</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>kord</span>            </a>    </div>
+    <div>0.8.x-SNAPSHOT
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="common::dev.kord.common.serialization/DurationAsLongSerializer///PointingToDeclaration//486241981">
+  <div class="breadcrumbs"><a href="../../index.html">common</a><span class="delimiter">/</span><a href="../index.html">dev.kord.common.serialization</a><span class="delimiter">/</span><a href="index.html">DurationAsLongSerializer</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Duration</span><wbr><span>As</span><wbr><span>Long</span><wbr><span><span>Serializer</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">sealed </span><span class="token keyword">class </span><a href="index.html">DurationAsLongSerializer</a> : <a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization/-k-serializer/index.html">KSerializer</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">Duration</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Serializer that encodes and decodes <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">Duration</a>s as a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-long/index.html">Long</a> number of the specified <a href="unit.html">unit</a>.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Sources">Sources</button><button class="section-tab" data-togglable="Inheritors">Inheritors</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-466504424%2FFunctions%2F486241981" anchor-label="deserialize" id="-466504424%2FFunctions%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="deserialize.html"><span><span>deserialize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-466504424%2FFunctions%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="deserialize.html"><span class="token function">deserialize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">decoder<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization.encoding/-decoder/index.html">Decoder</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">Duration</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2057977496%2FFunctions%2F486241981" anchor-label="serialize" id="2057977496%2FFunctions%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="serialize.html"><span><span>serialize</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2057977496%2FFunctions%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">fun </span><a href="serialize.html"><span class="token function">serialize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">encoder<span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization.encoding/-encoder/index.html">Encoder</a><span class="token punctuation">, </span></span><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">Duration</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="-125100874%2FProperties%2F486241981" anchor-label="descriptor" id="-125100874%2FProperties%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="descriptor.html"><span><span>descriptor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-125100874%2FProperties%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/main"><a data-name="-125100874%2FProperties%2F486241981" anchor-label="descriptor" id="-125100874%2FProperties%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">override </span><span class="token keyword">val </span><a href="descriptor.html">descriptor</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/kotlinx.serialization/kotlinx-serialization-core/kotlinx.serialization.descriptors/-serial-descriptor/index.html">SerialDescriptor</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1443458625%2FProperties%2F486241981" anchor-label="unit" id="1443458625%2FProperties%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="unit.html"><span><span>unit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1443458625%2FProperties%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/main"><a data-name="1443458625%2FProperties%2F486241981" anchor-label="unit" id="1443458625%2FProperties%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="unit.html">unit</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration-unit/index.html">DurationUnit</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Inheritors</h2>
+      <div class="table" data-togglable="Inheritors"><a data-name="-1823097424%2FInheritors%2F486241981" anchor-label="DurationInNanosecondsSerializer" id="-1823097424%2FInheritors%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-duration-in-nanoseconds-serializer/index.html">DurationInNanosecondsSerializer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1823097424%2FInheritors%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="645342472%2FInheritors%2F486241981" anchor-label="DurationInMicrosecondsSerializer" id="645342472%2FInheritors%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-duration-in-microseconds-serializer/index.html">DurationInMicrosecondsSerializer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="645342472%2FInheritors%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-1526011183%2FInheritors%2F486241981" anchor-label="DurationInMillisecondsSerializer" id="-1526011183%2FInheritors%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-duration-in-milliseconds-serializer/index.html">DurationInMillisecondsSerializer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1526011183%2FInheritors%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="1160270332%2FInheritors%2F486241981" anchor-label="DurationInSecondsSerializer" id="1160270332%2FInheritors%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-duration-in-seconds-serializer/index.html">DurationInSecondsSerializer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1160270332%2FInheritors%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="456156060%2FInheritors%2F486241981" anchor-label="DurationInMinutesSerializer" id="456156060%2FInheritors%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-duration-in-minutes-serializer/index.html">DurationInMinutesSerializer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="456156060%2FInheritors%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-844340628%2FInheritors%2F486241981" anchor-label="DurationInHoursSerializer" id="-844340628%2FInheritors%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-duration-in-hours-serializer/index.html">DurationInHoursSerializer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-844340628%2FInheritors%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+<a data-name="-694416788%2FInheritors%2F486241981" anchor-label="DurationInDaysSerializer" id="-694416788%2FInheritors%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-duration-in-days-serializer/index.html">DurationInDaysSerializer</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-694416788%2FInheritors%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Sources</h2>
+      <div class="table" data-togglable="Sources"><a data-name="1955591802%2FSource%2F486241981" anchor-label="https://github.com/kordlib/kord/blob/9a4e3e1dab2a2aa693b3f24303bd22e46ab549fa/common/src/main/kotlin//serialization/DurationSerializers.kt#L17" id="1955591802%2FSource%2F486241981" data-filterable-set=":common:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/main" data-filterable-set=":common:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="https://github.com/kordlib/kord/blob/9a4e3e1dab2a2aa693b3f24303bd22e46ab549fa/common/src/main/kotlin//serialization/DurationSerializers.kt#L17">jvm source</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1955591802%2FSource%2F486241981"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
