@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>dev.kord.voice.io</title>
 <link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
 <link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -28,6 +37,9 @@ if(savedDarkMode === true){
     <div>0.8.x-SNAPSHOT
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":voice:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -37,133 +49,137 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="voice::dev.kord.voice.io////PointingToDeclaration//634246632">
-  <div class="breadcrumbs"><a href="../index.html">voice</a><span class="delimiter">/</span><a href="index.html">dev.kord.voice.io</a></div>
+<div class="main-content" data-page-type="package" id="content" pageids="voice::dev.kord.voice.io////PointingToDeclaration//634246632">
+  <div class="breadcrumbs"><a href="../index.html">voice</a><span class="delimiter">/</span><span class="current">dev.kord.voice.io</span></div>
   <div class="cover ">
-    <h1 class="cover"><span><span>Package</span></span> <span>dev.</span><wbr><span>kord.</span><wbr><span>voice.</span><wbr><span>io</span></h1>
+    <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
     <div class="tabs-section-body">
-      <h2 class="">Types</h2>
-      <div class="table" data-togglable="Types"><a data-name="1532497609%2FClasslikes%2F634246632" anchor-label="ByteArrayView" id="1532497609%2FClasslikes%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-byte-array-view/index.html"><span>Byte</span><wbr><span>Array</span><wbr><span><span>View</span></span></a></div>
+      <div data-togglable="TYPE">
+        <h2 class="">Types</h2>
+        <div class="table"><a data-name="1532497609%2FClasslikes%2F634246632" anchor-label="ByteArrayView" id="1532497609%2FClasslikes%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-byte-array-view/index.html"><span>Byte</span><wbr><span>Array</span><wbr><span><span>View</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1532497609%2FClasslikes%2F634246632"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-byte-array-view/index.html">ByteArrayView</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A lightweight read-only view of a ByteArray.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-byte-array-view/index.html">ByteArrayView</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte/index.html">Byte</a><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">A lightweight read-only view of a ByteArray.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-18639902%2FClasslikes%2F634246632" anchor-label="MutableByteArrayCursor" id="-18639902%2FClasslikes%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-mutable-byte-array-cursor/index.html"><span>Mutable</span><wbr><span>Byte</span><wbr><span>Array</span><wbr><span><span>Cursor</span></span></a></div>
+          <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-mutable-byte-array-cursor/index.html"><span>Mutable</span><wbr><span>Byte</span><wbr><span>Array</span><wbr><span><span>Cursor</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-18639902%2FClasslikes%2F634246632"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A light-weight mutable cursor for a ByteArray.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A light-weight mutable cursor for a ByteArray.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1494092280%2FClasslikes%2F634246632" anchor-label="ReadableByteArrayCursor" id="-1494092280%2FClasslikes%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="-readable-byte-array-cursor/index.html"><span>Readable</span><wbr><span>Byte</span><wbr><span>Array</span><wbr><span><span>Cursor</span></span></a></div>
+          <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-readable-byte-array-cursor/index.html"><span>Readable</span><wbr><span>Byte</span><wbr><span>Array</span><wbr><span><span>Cursor</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1494092280%2FClasslikes%2F634246632"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-readable-byte-array-cursor/index.html">ReadableByteArrayCursor</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>view<span class="token operator">: </span><a href="-byte-array-view/index.html">ByteArrayView</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A lightweight read-only cursor for a ByteArrayView.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-readable-byte-array-cursor/index.html">ReadableByteArrayCursor</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>view<span class="token operator">: </span><a href="-byte-array-view/index.html">ByteArrayView</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A lightweight read-only cursor for a ByteArrayView.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-1686810769%2FFunctions%2F634246632" anchor-label="mutableCursor" id="-1686810769%2FFunctions%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="mutable-cursor.html"><span>mutable</span><wbr><span><span>Cursor</span></span></a></div>
+      <div data-togglable="EXTENSION_FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="-1686810769%2FFunctions%2F634246632" anchor-label="mutableCursor" id="-1686810769%2FFunctions%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="mutable-cursor.html"><span>mutable</span><wbr><span><span>Cursor</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1686810769%2FFunctions%2F634246632"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-byte-array-view/index.html">ByteArrayView</a><span class="token punctuation">.</span><a href="mutable-cursor.html"><span class="token function">mutableCursor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="mutable-cursor.html"><span class="token function">mutableCursor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-byte-array-view/index.html">ByteArrayView</a><span class="token punctuation">.</span><a href="mutable-cursor.html"><span class="token function">mutableCursor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="mutable-cursor.html"><span class="token function">mutableCursor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1184277699%2FFunctions%2F634246632" anchor-label="readableCursor" id="-1184277699%2FFunctions%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="readable-cursor.html"><span>readable</span><wbr><span><span>Cursor</span></span></a></div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="readable-cursor.html"><span>readable</span><wbr><span><span>Cursor</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1184277699%2FFunctions%2F634246632"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-byte-array-view/index.html">ByteArrayView</a><span class="token punctuation">.</span><a href="readable-cursor.html"><span class="token function">readableCursor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-readable-byte-array-cursor/index.html">ReadableByteArrayCursor</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="readable-cursor.html"><span class="token function">readableCursor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-readable-byte-array-cursor/index.html">ReadableByteArrayCursor</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-byte-array-view/index.html">ByteArrayView</a><span class="token punctuation">.</span><a href="readable-cursor.html"><span class="token function">readableCursor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-readable-byte-array-cursor/index.html">ReadableByteArrayCursor</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="readable-cursor.html"><span class="token function">readableCursor</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-readable-byte-array-cursor/index.html">ReadableByteArrayCursor</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="869810069%2FFunctions%2F634246632" anchor-label="view" id="869810069%2FFunctions%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="view.html"><span><span>view</span></span></a></div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="view.html"><span><span>view</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="869810069%2FFunctions%2F634246632"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="view.html"><span class="token function">view</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-byte-array-view/index.html">ByteArrayView</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="view.html"><span class="token function">view</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">start<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">end<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-byte-array-view/index.html">ByteArrayView</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="view.html"><span class="token function">view</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-byte-array-view/index.html">ByteArrayView</a></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a><span class="token punctuation">.</span><a href="view.html"><span class="token function">view</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">start<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">end<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-byte-array-view/index.html">ByteArrayView</a><span class="token operator">?</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-137682467%2FFunctions%2F634246632" anchor-label="writeByteArrayOrResize" id="-137682467%2FFunctions%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="write-byte-array-or-resize.html"><span>write</span><wbr><span>Byte</span><wbr><span>Array</span><wbr><span>Or</span><wbr><span><span>Resize</span></span></a></div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="write-byte-array-or-resize.html"><span>write</span><wbr><span>Byte</span><wbr><span>Array</span><wbr><span>Or</span><wbr><span><span>Resize</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-137682467%2FFunctions%2F634246632"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a><span class="token punctuation">.</span><a href="write-byte-array-or-resize.html"><span class="token function">writeByteArrayOrResize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a><span class="token punctuation">.</span><a href="write-byte-array-or-resize.html"><span class="token function">writeByteArrayOrResize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">data<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-byte-array/index.html">ByteArray</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1614215664%2FFunctions%2F634246632" anchor-label="writeByteViewOrResize" id="-1614215664%2FFunctions%2F634246632" data-filterable-set=":voice:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="write-byte-view-or-resize.html"><span>write</span><wbr><span>Byte</span><wbr><span>View</span><wbr><span>Or</span><wbr><span><span>Resize</span></span></a></div>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":voice:dokkaHtmlPartial/main" data-filterable-set=":voice:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="write-byte-view-or-resize.html"><span>write</span><wbr><span>Byte</span><wbr><span>View</span><wbr><span>Or</span><wbr><span><span>Resize</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1614215664%2FFunctions%2F634246632"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a><span class="token punctuation">.</span><a href="write-byte-view-or-resize.html"><span class="token function">writeByteViewOrResize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="-byte-array-view/index.html">ByteArrayView</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":voice:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-mutable-byte-array-cursor/index.html">MutableByteArrayCursor</a><span class="token punctuation">.</span><a href="write-byte-view-or-resize.html"><span class="token function">writeByteViewOrResize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">view<span class="token operator">: </span><a href="-byte-array-view/index.html">ByteArrayView</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
@@ -173,10 +189,10 @@ if(savedDarkMode === true){
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 

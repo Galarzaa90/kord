@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>InteractionResponseModifyBuilder</title>
 <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -28,6 +37,9 @@ if(savedDarkMode === true){
     <div>0.8.x-SNAPSHOT
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":rest:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -37,166 +49,249 @@ if(savedDarkMode === true){
         <div id="sideMenu"></div>
     </div>
     <div id="main">
-<div class="main-content" id="content" pageids="rest::dev.kord.rest.builder.message.modify/InteractionResponseModifyBuilder///PointingToDeclaration//142466484">
-  <div class="breadcrumbs"><a href="../../index.html">rest</a><span class="delimiter">/</span><a href="../index.html">dev.kord.rest.builder.message.modify</a><span class="delimiter">/</span><a href="index.html">InteractionResponseModifyBuilder</a></div>
+<div class="main-content" data-page-type="classlike" id="content" pageids="rest::dev.kord.rest.builder.message.modify/InteractionResponseModifyBuilder///PointingToDeclaration//142466484">
+  <div class="breadcrumbs"><a href="../../index.html">rest</a><span class="delimiter">/</span><a href="../index.html">dev.kord.rest.builder.message.modify</a><span class="delimiter">/</span><span class="current">InteractionResponseModifyBuilder</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Interaction</span><wbr><span>Response</span><wbr><span>Modify</span><wbr><span><span>Builder</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">InteractionResponseModifyBuilder</a> : <a href="../-message-modify-builder/index.html">MessageModifyBuilder</a>, <a href="../../dev.kord.rest.builder/-request-builder/index.html">RequestBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.kord.rest.json.request/-multipart-interaction-response-modify-request/index.html">MultipartInteractionResponseModifyRequest</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">InteractionResponseModifyBuilder</a> : <a href="../-message-modify-builder/index.html">MessageModifyBuilder</a>, <a href="../../dev.kord.rest.builder/-request-builder/index.html">RequestBuilder</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.kord.rest.json.request/-multipart-interaction-response-modify-request/index.html">MultipartInteractionResponseModifyRequest</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/kordlib/kord/blob/1d7ec553fc2ad7978d4fe31ec7c6af7eaee6fe94/rest/src/main/kotlin/builder/message/modify/InteractionResponseModifyBuilder.kt#L19">source</a>)</span></span></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Sources">Sources</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
-      <h2 class="tabbedcontent">Constructors</h2>
-      <div class="table" data-togglable="Constructors"><a data-name="-1814560562%2FConstructors%2F142466484" anchor-label="InteractionResponseModifyBuilder" id="-1814560562%2FConstructors%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue TabbedContent">
-            <div class=""><span class="inline-flex">
-                <div><a href="-interaction-response-modify-builder.html"><span>Interaction</span><wbr><span>Response</span><wbr><span>Modify</span><wbr><span><span>Builder</span></span></a></div>
+      <div data-togglable="CONSTRUCTOR">
+        <h2 class="">Constructors</h2>
+        <div class="table"><a data-name="-1814560562%2FConstructors%2F142466484" anchor-label="InteractionResponseModifyBuilder" id="-1814560562%2FConstructors%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-interaction-response-modify-builder.html"><span>Interaction</span><wbr><span>Response</span><wbr><span>Modify</span><wbr><span><span>Builder</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1814560562%2FConstructors%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-interaction-response-modify-builder.html"><span class="token function">InteractionResponseModifyBuilder</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token punctuation">)</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Functions</h2>
-      <div class="table" data-togglable="Functions"><a data-name="-1214224581%2FFunctions%2F142466484" anchor-label="addFile" id="-1214224581%2FFunctions%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="../-message-modify-builder/add-file.html"><span>add</span><wbr><span><span>File</span></span></a></div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="96794426%2FFunctions%2F142466484" anchor-label="actionRow" id="96794426%2FFunctions%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../action-row.html"><span>action</span><wbr><span><span>Row</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="96794426%2FFunctions%2F142466484"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-message-modify-builder/index.html">MessageModifyBuilder</a><span class="token punctuation">.</span><a href="../action-row.html"><span class="token function">actionRow</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><span class="token keyword"></span><a href="../../dev.kord.rest.builder.component/-action-row-builder/index.html">ActionRowBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1214224581%2FFunctions%2F142466484" anchor-label="addFile" id="-1214224581%2FFunctions%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-message-modify-builder/add-file.html"><span>add</span><wbr><span><span>File</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1214224581%2FFunctions%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-message-modify-builder/add-file.html"><span class="token function">addFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../dev.kord.rest/-named-file/index.html">NamedFile</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds a file with the given <a href="../-message-modify-builder/add-file.html">path</a> to the attachments.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-message-modify-builder/add-file.html"><span class="token function">addFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">contentProvider<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.request.forms/-channel-provider/index.html">ChannelProvider</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../dev.kord.rest/-named-file/index.html">NamedFile</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Adds a file with the <a href="../-message-modify-builder/add-file.html">name</a> and <a href="../-message-modify-builder/add-file.html">contentProvider</a> to the attachments.</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../-message-modify-builder/add-file.html"><span class="token function">addFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">path<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Path.html">Path</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../dev.kord.rest/-named-file/index.html">NamedFile</a></div><div class="brief "><p class="paragraph">Adds a file with the given <a href="../-message-modify-builder/add-file.html">path</a> to the attachments.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-message-modify-builder/add-file.html"><span class="token function">addFile</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">contentProvider<span class="token operator">: </span><a href="https://api.ktor.io/ktor-client-core/io.ktor.client.request.forms/-channel-provider/index.html">ChannelProvider</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../dev.kord.rest/-named-file/index.html">NamedFile</a></div><div class="brief "><p class="paragraph">Adds a file with the <a href="../-message-modify-builder/add-file.html">name</a> and <a href="../-message-modify-builder/add-file.html">contentProvider</a> to the attachments.</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+<a data-name="-958490800%2FFunctions%2F142466484" anchor-label="allowedMentions" id="-958490800%2FFunctions%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../allowed-mentions.html"><span>allowed</span><wbr><span><span>Mentions</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-958490800%2FFunctions%2F142466484"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-message-modify-builder/index.html">MessageModifyBuilder</a><span class="token punctuation">.</span><a href="../allowed-mentions.html"><span class="token function">allowedMentions</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="../../dev.kord.rest.builder.message/-allowed-mentions-builder/index.html">AllowedMentionsBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the mentions that should trigger a ping. Not calling this function will result in the default behavior (ping everything), calling this function but not configuring it before the request is build will result in all pings being ignored.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1203811792%2FFunctions%2F142466484" anchor-label="embed" id="1203811792%2FFunctions%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../embed.html"><span><span>embed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1203811792%2FFunctions%2F142466484"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-message-modify-builder/index.html">MessageModifyBuilder</a><span class="token punctuation">.</span><a href="../embed.html"><span class="token function">embed</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token keyword"></span><a href="../../dev.kord.rest.builder.message/-embed-builder/index.html">EmbedBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1635468600%2FFunctions%2F142466484" anchor-label="messageFlags" id="-1635468600%2FFunctions%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../message-flags.html"><span>message</span><wbr><span><span>Flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1635468600%2FFunctions%2F142466484"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="../-message-modify-builder/index.html">MessageModifyBuilder</a><span class="token punctuation">.</span><a href="../message-flags.html"><span class="token function">messageFlags</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><span class="token keyword"></span><a href="../../../common/dev.kord.common.entity/-message-flags/-builder/index.html">MessageFlags.Builder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets/Unsets the <a href="../../../common/dev.kord.common.entity/-message-flags/index.html">MessageFlags</a> for this message.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="125694026%2FFunctions%2F142466484" anchor-label="toRequest" id="125694026%2FFunctions%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="to-request.html"><span>to</span><wbr><span><span>Request</span></span></a></div>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="to-request.html"><span>to</span><wbr><span><span>Request</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="125694026%2FFunctions%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-request.html"><span class="token function">toRequest</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../dev.kord.rest.json.request/-multipart-interaction-response-modify-request/index.html">MultipartInteractionResponseModifyRequest</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-request.html"><span class="token function">toRequest</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../../dev.kord.rest.json.request/-multipart-interaction-response-modify-request/index.html">MultipartInteractionResponseModifyRequest</a></div></div></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h2 class="">Properties</h2>
-      <div class="table" data-togglable="Properties"><a data-name="-2043664339%2FProperties%2F142466484" anchor-label="allowedMentions" id="-2043664339%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="allowed-mentions.html"><span>allowed</span><wbr><span><span>Mentions</span></span></a></div>
+      <div data-togglable="PROPERTY">
+        <h2 class="">Properties</h2>
+        <div class="table"><a data-name="-2043664339%2FProperties%2F142466484" anchor-label="allowedMentions" id="-2043664339%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="allowed-mentions.html"><span>allowed</span><wbr><span><span>Mentions</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2043664339%2FProperties%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="-2043664339%2FProperties%2F142466484" anchor-label="allowedMentions" id="-2043664339%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="allowed-mentions.html">allowedMentions</a><span class="token operator">: </span><a href="../../dev.kord.rest.builder.message/-allowed-mentions-builder/index.html">AllowedMentionsBuilder</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="allowed-mentions.html">allowedMentions</a><span class="token operator">: </span><a href="../../dev.kord.rest.builder.message/-allowed-mentions-builder/index.html">AllowedMentionsBuilder</a><span class="token operator">?</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="679977838%2FProperties%2F142466484" anchor-label="attachments" id="679977838%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="attachments.html"><span><span>attachments</span></span></a></div>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="attachments.html"><span><span>attachments</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="679977838%2FProperties%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="679977838%2FProperties%2F142466484" anchor-label="attachments" id="679977838%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="attachments.html">attachments</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../common/dev.kord.common.entity/-discord-attachment/index.html">DiscordAttachment</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="attachments.html">attachments</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../../common/dev.kord.common.entity/-discord-attachment/index.html">DiscordAttachment</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="-1368739866%2FProperties%2F142466484" anchor-label="components" id="-1368739866%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="components.html"><span><span>components</span></span></a></div>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="components.html"><span><span>components</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1368739866%2FProperties%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="-1368739866%2FProperties%2F142466484" anchor-label="components" id="-1368739866%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="components.html">components</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.kord.rest.builder.component/-message-component-builder/index.html">MessageComponentBuilder</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="components.html">components</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.kord.rest.builder.component/-message-component-builder/index.html">MessageComponentBuilder</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1065310021%2FProperties%2F142466484" anchor-label="content" id="1065310021%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="content.html"><span><span>content</span></span></a></div>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="content.html"><span><span>content</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1065310021%2FProperties%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="1065310021%2FProperties%2F142466484" anchor-label="content" id="1065310021%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="content.html">content</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="content.html">content</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="346824258%2FProperties%2F142466484" anchor-label="embeds" id="346824258%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="embeds.html"><span><span>embeds</span></span></a></div>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="embeds.html"><span><span>embeds</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="346824258%2FProperties%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="346824258%2FProperties%2F142466484" anchor-label="embeds" id="346824258%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="embeds.html">embeds</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.kord.rest.builder.message/-embed-builder/index.html">EmbedBuilder</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="embeds.html">embeds</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.kord.rest.builder.message/-embed-builder/index.html">EmbedBuilder</a><span class="token operator">&gt;</span><span class="token operator">?</span></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 <a data-name="1352134471%2FProperties%2F142466484" anchor-label="files" id="1352134471%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="files.html"><span><span>files</span></span></a></div>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="files.html"><span><span>files</span></span></a></div>
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1352134471%2FProperties%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div>
-              <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><a data-name="1352134471%2FProperties%2F142466484" anchor-label="files" id="1352134471%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="files.html">files</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.kord.rest/-named-file/index.html">NamedFile</a><span class="token operator">&gt;</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1352134471%2FProperties%2F142466484" anchor-label="files" id="1352134471%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a><p class="paragraph">The files to include as attachments</p></div></div></div>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="files.html">files</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../../dev.kord.rest/-named-file/index.html">NamedFile</a><span class="token operator">&gt;</span><span class="token operator">?</span></div><div class="brief "><p class="paragraph">The files to include as attachments</p></div></div></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <h2 class="">Sources</h2>
-      <div class="table" data-togglable="Sources"><a data-name="960020963%2FSource%2F142466484" anchor-label="https://github.com/kordlib/kord/blob/9a4e3e1dab2a2aa693b3f24303bd22e46ab549fa/rest/src/main/kotlin//builder/message/modify/InteractionResponseModifyBuilder.kt#L16" id="960020963%2FSource%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="https://github.com/kordlib/kord/blob/9a4e3e1dab2a2aa693b3f24303bd22e46ab549fa/rest/src/main/kotlin//builder/message/modify/InteractionResponseModifyBuilder.kt#L16">jvm source</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="960020963%2FSource%2F142466484"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
+<a data-name="-433165001%2FProperties%2F142466484" anchor-label="flags" id="-433165001%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="flags.html"><span><span>flags</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-433165001%2FProperties%2F142466484"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="flags.html">flags</a><span class="token operator">: </span><a href="../../../common/dev.kord.common.entity/-message-flags/index.html">MessageFlags</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Optional custom <a href="../../../common/dev.kord.common.entity/-message-flags/index.html">MessageFlags</a> to update in this message.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1258919475%2FProperties%2F142466484" anchor-label="suppressEmbeds" id="-1258919475%2FProperties%2F142466484" data-filterable-set=":rest:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-filterable-current=":rest:dokkaHtmlPartial/main" data-filterable-set=":rest:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="suppress-embeds.html"><span>suppress</span><wbr><span><span>Embeds</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1258919475%2FProperties%2F142466484"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":rest:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">var </span><a href="suppress-embeds.html">suppressEmbeds</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Do not include any embeds when serializing this message.</p></div></div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -204,10 +299,10 @@ if(savedDarkMode === true){
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 
