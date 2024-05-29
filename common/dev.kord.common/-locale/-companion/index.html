@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Companion</title>
-<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
-<link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../../styles/main.css" rel="Stylesheet">
 <link href="../../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
@@ -29,54 +32,41 @@
 <script type="text/javascript" src="../../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../../../index.html">
-<span>kord</span>            </a>    </div>
-    <div>0.10.0-SNAPSHOT
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../../index.html">
+                            kord
+                    </a>            </div>
+            <div class="library-version">0.15.0-SNAPSHOT
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector common-like" data-active="" data-filter=":common:dokkaHtmlPartial/commonMain">common</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="kord-common::dev.kord.common/Locale.Companion///PointingToDeclaration//-1137157624">
   <div class="breadcrumbs"><a href="../../../index.html">kord-common</a><span class="delimiter">/</span><a href="../../index.html">dev.kord.common</a><span class="delimiter">/</span><a href="../index.html">Locale</a><span class="delimiter">/</span><span class="current">Companion</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Companion</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/kordlib/kord/blob/b63b009537517edb6880e6d8b9fe93ef7c6853aa/common/src/commonMain/kotlin/Locale.kt#L19">source</a>)</span></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/kordlib/kord/blob/a7f64b909ad1c0aae7e6e81bc1bd2607cf43e103/common/src/commonMain/kotlin/Locale.kt#L18">source</a>)</span></span></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,FUNCTION,PROPERTY">Members</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
-      <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
-        <div class="table"><a data-name="1323979860%2FFunctions%2F-1137157624" anchor-label="fromString" id="1323979860%2FFunctions%2F-1137157624" data-filterable-set=":common:dokkaHtmlPartial/commonMain"></a>
-          <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/commonMain" data-filterable-set=":common:dokkaHtmlPartial/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="from-string.html"><span>from</span><wbr><span><span>String</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1323979860%2FFunctions%2F-1137157624"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="from-string.html"><span class="token function">fromString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Decodes the <a href="../index.html">Locale</a> from a <code class="lang-kotlin">languageCode-countryCode</code> or <code class="lang-kotlin">languageCode</code> format.</p></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div data-togglable="PROPERTY">
         <h2 class="">Properties</h2>
         <div class="table"><a data-name="230068782%2FProperties%2F-1137157624" anchor-label="ALL" id="230068782%2FProperties%2F-1137157624" data-filterable-set=":common:dokkaHtmlPartial/commonMain"></a>
@@ -89,7 +79,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-a-l-l.html">ALL</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="../index.html">Locale</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">All languages <a href="https://discord.com/developers/docs/reference#locales">supported by Discord</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-a-l-l.html">ALL</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../index.html">Locale</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">All languages <a href="https://discord.com/developers/docs/reference#locales">supported by Discord</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -104,7 +94,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-b-u-l-g-a-r-i-a-n.html">BULGARIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Bulgarian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-b-u-l-g-a-r-i-a-n.html">BULGARIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Bulgarian.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -119,7 +109,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-c-h-i-n-e-s-e_-c-h-i-n-a.html">CHINESE_CHINA</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Chinese (China).</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-c-h-i-n-e-s-e_-c-h-i-n-a.html">CHINESE_CHINA</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Chinese (China).</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -134,7 +124,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-c-h-i-n-e-s-e_-t-a-i-w-a-n.html">CHINESE_TAIWAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Chinese (Taiwan).</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-c-h-i-n-e-s-e_-t-a-i-w-a-n.html">CHINESE_TAIWAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Chinese (Taiwan).</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -149,7 +139,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-c-r-o-a-t-i-a-n.html">CROATIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Croatian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-c-r-o-a-t-i-a-n.html">CROATIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Croatian.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -164,7 +154,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-c-z-e-c-h.html">CZECH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Czech.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-c-z-e-c-h.html">CZECH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Czech.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -179,7 +169,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-a-n-i-s-h.html">DANISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Danish.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-d-a-n-i-s-h.html">DANISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Danish.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -194,7 +184,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-d-u-t-c-h.html">DUTCH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Dutch.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-d-u-t-c-h.html">DUTCH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Dutch.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -209,7 +199,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-e-n-g-l-i-s-h_-g-r-e-a-t_-b-r-i-t-a-i-n.html">ENGLISH_GREAT_BRITAIN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">English (Great Britain).</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-e-n-g-l-i-s-h_-g-r-e-a-t_-b-r-i-t-a-i-n.html">ENGLISH_GREAT_BRITAIN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">English (Great Britain).</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -224,7 +214,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-e-n-g-l-i-s-h_-u-n-i-t-e-d_-s-t-a-t-e-s.html">ENGLISH_UNITED_STATES</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">English (United States).</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-e-n-g-l-i-s-h_-u-n-i-t-e-d_-s-t-a-t-e-s.html">ENGLISH_UNITED_STATES</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">English (United States).</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -239,7 +229,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-f-i-n-n-i-s-h.html">FINNISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Finnish.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-f-i-n-n-i-s-h.html">FINNISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Finnish.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -254,7 +244,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-f-r-e-n-c-h.html">FRENCH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">French.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-f-r-e-n-c-h.html">FRENCH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">French.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -269,7 +259,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-g-e-r-m-a-n.html">GERMAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">German.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-e-r-m-a-n.html">GERMAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">German.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -284,7 +274,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-g-r-e-e-k.html">GREEK</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Greek.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-g-r-e-e-k.html">GREEK</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Greek.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -299,7 +289,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-h-i-n-d-i.html">HINDI</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Hindi.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-h-i-n-d-i.html">HINDI</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Hindi.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -314,7 +304,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-h-u-n-g-a-r-i-a-n.html">HUNGARIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Hungarian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-h-u-n-g-a-r-i-a-n.html">HUNGARIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Hungarian.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -329,7 +319,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-n-d-o-n-e-s-i-a-n.html">INDONESIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Indonesian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-i-n-d-o-n-e-s-i-a-n.html">INDONESIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Indonesian.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -344,7 +334,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-i-t-a-l-i-a-n.html">ITALIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Italian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-i-t-a-l-i-a-n.html">ITALIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Italian.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -359,7 +349,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-j-a-p-a-n-e-s-e.html">JAPANESE</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Japanese.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-j-a-p-a-n-e-s-e.html">JAPANESE</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Japanese.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -374,7 +364,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-k-o-r-e-a-n.html">KOREAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Korean.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-k-o-r-e-a-n.html">KOREAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Korean.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -389,7 +379,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-l-i-t-h-u-a-n-i-a-n.html">LITHUANIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Lithuanian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-l-i-t-h-u-a-n-i-a-n.html">LITHUANIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Lithuanian.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -404,7 +394,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-n-o-r-w-e-g-i-a-n.html">NORWEGIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Norwegian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-n-o-r-w-e-g-i-a-n.html">NORWEGIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Norwegian.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -419,7 +409,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-p-o-l-i-s-h.html">POLISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Polish.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-p-o-l-i-s-h.html">POLISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Polish.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -434,7 +424,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-p-o-r-t-u-g-u-e-s-e_-b-r-a-z-i-l.html">PORTUGUESE_BRAZIL</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Portuguese (Brazil).</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-p-o-r-t-u-g-u-e-s-e_-b-r-a-z-i-l.html">PORTUGUESE_BRAZIL</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Portuguese (Brazil).</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -449,7 +439,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-r-o-m-a-n-i-a-n.html">ROMANIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Romanian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-r-o-m-a-n-i-a-n.html">ROMANIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Romanian.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -464,7 +454,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-r-u-s-s-i-a-n.html">RUSSIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Russian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-r-u-s-s-i-a-n.html">RUSSIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Russian.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="358836647%2FProperties%2F-1137157624" anchor-label="SPANISH_LATIN_AMERICA" id="358836647%2FProperties%2F-1137157624" data-filterable-set=":common:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/commonMain" data-filterable-set=":common:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="-s-p-a-n-i-s-h_-l-a-t-i-n_-a-m-e-r-i-c-a.html"><span><span>SPANISH_LATIN_AMERICA</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="358836647%2FProperties%2F-1137157624"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-p-a-n-i-s-h_-l-a-t-i-n_-a-m-e-r-i-c-a.html">SPANISH_LATIN_AMERICA</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Spanish (Latin America).</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -479,7 +484,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-s-p-a-n-i-s-h_-s-p-a-i-n.html">SPANISH_SPAIN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Spanish (Spain).</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-p-a-n-i-s-h_-s-p-a-i-n.html">SPANISH_SPAIN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Spanish (Spain).</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -494,7 +499,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-s-w-e-d-i-s-h.html">SWEDISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Swedish.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-s-w-e-d-i-s-h.html">SWEDISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Swedish.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -509,7 +514,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-h-a-i.html">THAI</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Thai.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-t-h-a-i.html">THAI</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Thai.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -524,7 +529,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-t-u-r-k-i-s-h.html">TURKISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Turkish.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-t-u-r-k-i-s-h.html">TURKISH</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Turkish.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -539,7 +544,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-u-k-r-a-i-n-i-a-n.html">UKRAINIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Ukrainian.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-u-k-r-a-i-n-i-a-n.html">UKRAINIAN</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Ukrainian.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -554,7 +559,26 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-v-i-e-t-n-a-m-e-s-e.html">VIETNAMESE</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Vietnamese.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">val </span><a href="-v-i-e-t-n-a-m-e-s-e.html">VIETNAMESE</a><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Vietnamese.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-togglable="FUNCTION">
+        <h2 class="">Functions</h2>
+        <div class="table"><a data-name="1323979860%2FFunctions%2F-1137157624" anchor-label="fromString" id="1323979860%2FFunctions%2F-1137157624" data-filterable-set=":common:dokkaHtmlPartial/commonMain"></a>
+          <div class="table-row" data-filterable-current=":common:dokkaHtmlPartial/commonMain" data-filterable-set=":common:dokkaHtmlPartial/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="from-string.html"><span>from</span><wbr><span><span>String</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1323979860%2FFunctions%2F-1137157624"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":common:dokkaHtmlPartial/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="from-string.html"><span class="token function">fromString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Locale</a></div><div class="brief "><p class="paragraph">Decodes the <a href="../index.html">Locale</a> from a <code class="lang-kotlin">languageCode-countryCode</code> or <code class="lang-kotlin">languageCode</code> format.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -565,10 +589,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 
