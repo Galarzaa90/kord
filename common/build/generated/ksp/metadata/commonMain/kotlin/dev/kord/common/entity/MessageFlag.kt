@@ -122,6 +122,12 @@ public sealed class MessageFlag(
      */
     public object IsVoiceMessage : MessageFlag(13)
 
+    /**
+     * Allows you to create fully
+     * [component](https://discord.com/developers/docs/components/overview)-driven messages.
+     */
+    public object IsComponentsV2 : MessageFlag(15)
+
     public companion object {
         /**
          * A [List] of all known [MessageFlag]s.
@@ -139,6 +145,7 @@ public sealed class MessageFlag(
                 FailedToMentionSomeRolesInThread,
                 SuppressNotifications,
                 IsVoiceMessage,
+                IsComponentsV2,
             )
         }
 
@@ -160,6 +167,7 @@ public sealed class MessageFlag(
             8 -> FailedToMentionSomeRolesInThread
             12 -> SuppressNotifications
             13 -> IsVoiceMessage
+            15 -> IsComponentsV2
             else -> Unknown(shift)
         }
     }
