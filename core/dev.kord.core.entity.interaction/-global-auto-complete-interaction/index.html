@@ -1,22 +1,22 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>GlobalAutoCompleteInteraction</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
@@ -24,55 +24,85 @@
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" async></script>
-<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../ui-kit/ui-kit.min.js" defer></script></head>
 <body>
-    <div class="root">
-<nav class="navigation" id="navigation-wrapper">
-    <div class="navigation--inner">
-        <div class="navigation-title">
-            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
-            <div class="library-name">
-<a class="library-name--link" href="../../../index.html">
-                            kord
-                    </a>            </div>
-            <div class="library-version">0.16.0-SNAPSHOT
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../index.html" tabindex="1">
+                    kord
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">or(map(map(map(map(valueof(ProcessOutputValueSource))))), map(map(map(map(valueof(ProcessOutputValueSource))))))
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core/commonMain" data-filter=":core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
             </div>
         </div>
-        <div class="filter-section" id="filter-section">
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":core/commonMain">common</button>
-        </div>
-    </div>
-    <div class="navigation-controls">
-        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
-        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
-    </div>
-</nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="sidebar--inner" id="sideMenu"></div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    kord
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="kord-core::dev.kord.core.entity.interaction/GlobalAutoCompleteInteraction///PointingToDeclaration//1239919082">
   <div class="breadcrumbs"><a href="../../index.html">kord-core</a><span class="delimiter">/</span><a href="../index.html">dev.kord.core.entity.interaction</a><span class="delimiter">/</span><span class="current">GlobalAutoCompleteInteraction</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Global</span><wbr><span>Auto</span><wbr><span>Complete</span><wbr><span><span>Interaction</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">GlobalAutoCompleteInteraction</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>data<span class="token operator">: </span><a href="../../dev.kord.core.cache.data/-interaction-data/index.html">InteractionData</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>kord<span class="token operator">: </span><a href="../../dev.kord.core/-kord/index.html">Kord</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>supplier<span class="token operator">: </span><a href="../../dev.kord.core.supplier/-entity-supplier/index.html">EntitySupplier</a><span class="token operator"> = </span>kord.defaultSupplier</span></span><span class="token punctuation">)</span> : <a href="../-auto-complete-interaction/index.html">AutoCompleteInteraction</a>, <a href="../-global-interaction/index.html">GlobalInteraction</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/kordlib/kord/blob/eaf5dbe1755a4b2005098c6a931465266fed0b65/core/src/commonMain/kotlin/entity/interaction/AutoCompleteInteraction.kt#L52">source</a>)</span></span></div><p class="paragraph">An <a href="../-auto-complete-interaction/index.html">AutoCompleteInteraction</a> that took place in a global context (e.g. a DM).</p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">GlobalAutoCompleteInteraction</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>data<span class="token operator">: </span><a href="../../dev.kord.core.cache.data/-interaction-data/index.html">InteractionData</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>kord<span class="token operator">: </span><a href="../../dev.kord.core/-kord/index.html">Kord</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>supplier<span class="token operator">: </span><a href="../../dev.kord.core.supplier/-entity-supplier/index.html">EntitySupplier</a><span class="token operator"> = </span>kord.defaultSupplier</span></span><span class="token punctuation">)</span> : <a href="../-auto-complete-interaction/index.html">AutoCompleteInteraction</a>, <a href="../-global-interaction/index.html">GlobalInteraction</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/kordlib/kord/blob/map(map(map(valueof(ProcessOutputValueSource))))/core/src/commonMain/kotlin/entity/interaction/AutoCompleteInteraction.kt#L52">source</a>)</span></span></div><p class="paragraph">An <a href="../-auto-complete-interaction/index.html">AutoCompleteInteraction</a> that took place in a global context (e.g. a DM).</p></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
     <div class="tabs-section-body">
       <div data-togglable="CONSTRUCTOR">
-        <h2 class="">Constructors</h2>
+        <h2 class="tableheader">Constructors</h2>
         <div class="table"><a data-name="445229849%2FConstructors%2F1239919082" anchor-label="GlobalAutoCompleteInteraction" id="445229849%2FConstructors%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-togglable="CONSTRUCTOR" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-togglable="CONSTRUCTOR" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="-global-auto-complete-interaction.html"><span>Global</span><wbr><span>Auto</span><wbr><span>Complete</span><wbr><span><span>Interaction</span></span></a></div>
@@ -89,9 +119,9 @@
         </div>
       </div>
       <div data-togglable="PROPERTY">
-        <h2 class="">Properties</h2>
+        <h2 class="tableheader">Properties</h2>
         <div class="table"><a data-name="1416459335%2FProperties%2F1239919082" anchor-label="applicationId" id="1416459335%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/application-id.html"><span>application</span><wbr><span><span>Id</span></span></a></div>
@@ -105,8 +135,38 @@
               </div>
             </div>
           </div>
+<a data-name="1658109499%2FProperties%2F1239919082" anchor-label="attachmentSizeLimit" id="1658109499%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-interaction/attachment-size-limit.html"><span>attachment</span><wbr><span>Size</span><wbr><span><span>Limit</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1658109499%2FProperties%2F1239919082"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-interaction/attachment-size-limit.html">attachmentSizeLimit</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Attachment size limit in bytes</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-695128870%2FProperties%2F1239919082" anchor-label="authorizingIntegrationOwners" id="-695128870%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-interaction/authorizing-integration-owners.html"><span>authorizing</span><wbr><span>Integration</span><wbr><span><span>Owners</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-695128870%2FProperties%2F1239919082"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-interaction/authorizing-integration-owners.html">authorizingIntegrationOwners</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="../../../common/dev.kord.common.entity/-application-integration-type/index.html">ApplicationIntegrationType</a><span class="token punctuation">, </span><a href="../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Map of the authorizing users id by <a href="../../../common/dev.kord.common.entity/-application-integration-type/index.html">type</a>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="300894670%2FProperties%2F1239919082" anchor-label="channel" id="300894670%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../dev.kord.core.behavior.interaction/-interaction-behavior/channel.html"><span><span>channel</span></span></a></div>
@@ -121,7 +181,7 @@
             </div>
           </div>
 <a data-name="751724340%2FProperties%2F1239919082" anchor-label="channelId" id="751724340%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/channel-id.html"><span>channel</span><wbr><span><span>Id</span></span></a></div>
@@ -136,7 +196,7 @@
             </div>
           </div>
 <a data-name="-151377041%2FProperties%2F1239919082" anchor-label="command" id="-151377041%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-auto-complete-interaction/command.html"><span><span>command</span></span></a></div>
@@ -150,8 +210,23 @@
               </div>
             </div>
           </div>
+<a data-name="886846819%2FProperties%2F1239919082" anchor-label="context" id="886846819%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="../-interaction/context.html"><span><span>context</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="886846819%2FProperties%2F1239919082"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-interaction/context.html">context</a><span class="token operator">: </span><a href="../../../common/dev.kord.common.entity/-interaction-context-type/index.html">InteractionContextType</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph"><a href="../../../common/dev.kord.common.entity/-interaction-context-type/index.html">Context</a> where the interaction was triggered from.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="-1108892173%2FProperties%2F1239919082" anchor-label="data" id="-1108892173%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="data.html"><span><span>data</span></span></a></div>
@@ -166,7 +241,7 @@
             </div>
           </div>
 <a data-name="2013677122%2FProperties%2F1239919082" anchor-label="entitlements" id="2013677122%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/entitlements.html"><span><span>entitlements</span></span></a></div>
@@ -175,13 +250,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-interaction/entitlements.html">entitlements</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../dev.kord.core.entity.monetization/-entitlement/index.html">Entitlement</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">For <a href="https://discord.com/developers/docs/monetization/overview">monetized apps</a>, any <a href="../../dev.kord.core.entity.monetization/-entitlement/index.html">Entitlement</a>s for the <a href="../-interaction/user.html">invoking user</a>, representing access to premium <a href="../../dev.kord.core.entity.monetization/-sku/index.html">Sku</a>s.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-interaction/entitlements.html">entitlements</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../dev.kord.core.entity.monetization/-entitlement/index.html">Entitlement</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">For <a href="https://discord.com/developers/docs/monetization/overview">monetized apps</a>, any <a href="../../dev.kord.core.entity.monetization/-entitlement/index.html">Entitlement</a>s for the <a href="../-interaction/user.html">invoking user</a>, representing access to premium <a href="../../dev.kord.core.entity.monetization/-sku/index.html">Sku</a>s.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-644720306%2FProperties%2F1239919082" anchor-label="focusedOption" id="-644720306%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-auto-complete-interaction/focused-option.html"><span>focused</span><wbr><span><span>Option</span></span></a></div>
@@ -196,7 +271,7 @@
             </div>
           </div>
 <a data-name="796630565%2FProperties%2F1239919082" anchor-label="guildLocale" id="796630565%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/guild-locale.html"><span>guild</span><wbr><span><span>Locale</span></span></a></div>
@@ -211,7 +286,7 @@
             </div>
           </div>
 <a data-name="1128657261%2FProperties%2F1239919082" anchor-label="id" id="1128657261%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/id.html"><span><span>id</span></span></a></div>
@@ -226,7 +301,7 @@
             </div>
           </div>
 <a data-name="-1653660537%2FProperties%2F1239919082" anchor-label="kord" id="-1653660537%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="kord.html"><span><span>kord</span></span></a></div>
@@ -241,7 +316,7 @@
             </div>
           </div>
 <a data-name="-1959307378%2FProperties%2F1239919082" anchor-label="locale" id="-1959307378%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/locale.html"><span><span>locale</span></span></a></div>
@@ -256,7 +331,7 @@
             </div>
           </div>
 <a data-name="-1306094063%2FProperties%2F1239919082" anchor-label="supplier" id="-1306094063%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="supplier.html"><span><span>supplier</span></span></a></div>
@@ -271,7 +346,7 @@
             </div>
           </div>
 <a data-name="-493891175%2FProperties%2F1239919082" anchor-label="token" id="-493891175%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/token.html"><span><span>token</span></span></a></div>
@@ -280,13 +355,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-interaction/token.html">token</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">A continuation token for responding to the interaction.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="../-interaction/token.html">token</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div><div class="brief "><p class="paragraph">A continuation token for responding to the interaction.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-156053138%2FProperties%2F1239919082" anchor-label="type" id="-156053138%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/type.html"><span><span>type</span></span></a></div>
@@ -301,7 +376,7 @@
             </div>
           </div>
 <a data-name="480905725%2FProperties%2F1239919082" anchor-label="user" id="480905725%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/user.html"><span><span>user</span></span></a></div>
@@ -310,13 +385,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">val </span><a href="../-interaction/user.html">user</a><span class="token operator">: </span><a href="../../dev.kord.core.entity/-user/index.html">User</a></div><div class="brief "><p class="paragraph">The invoker of the interaction.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-interaction/user.html">user</a><span class="token operator">: </span><a href="../../dev.kord.core.entity/-user/index.html">User</a></div><div class="brief "><p class="paragraph">The invoker of the interaction.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="219053658%2FProperties%2F1239919082" anchor-label="version" id="219053658%2FProperties%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../-interaction/version.html"><span><span>version</span></span></a></div>
@@ -325,7 +400,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-interaction/version.html">version</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">read-only property, always 1</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">val </span><a href="../-interaction/version.html">version</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">read-only property, always 1</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -333,9 +408,9 @@
         </div>
       </div>
       <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
+        <h2 class="tableheader">Functions</h2>
         <div class="table"><a data-name="1855121047%2FFunctions%2F1239919082" anchor-label="compareTo" id="1855121047%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../dev.kord.core.entity/-entity/compare-to.html"><span>compare</span><wbr><span><span>To</span></span></a></div>
@@ -344,13 +419,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="../../dev.kord.core.entity/-entity/compare-to.html"><span class="token function">compareTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="../../dev.kord.core.entity/-entity/index.html">Entity</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Compares entities on <a href="../../dev.kord.core.entity/-entity/id.html">id</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="../../dev.kord.core.entity/-entity/compare-to.html"><span class="token function">compareTo</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="../../dev.kord.core.entity/-entity/index.html">Entity</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div><div class="brief "><p class="paragraph">Compares entities on <a href="../../dev.kord.core.entity/-entity/id.html">id</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="64393668%2FFunctions%2F1239919082" anchor-label="equals" id="64393668%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="equals.html"><span><span>equals</span></span></a></div>
@@ -359,13 +434,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="equals.html"><span class="token function">equals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">operator override </span><span class="token keyword">fun </span><a href="equals.html"><span class="token function">equals</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">other<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-any/index.html">Any</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="2109613404%2FFunctions%2F1239919082" anchor-label="getChannel" id="2109613404%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../dev.kord.core.behavior.interaction/-interaction-behavior/get-channel.html"><span>get</span><wbr><span><span>Channel</span></span></a></div>
@@ -380,7 +455,7 @@
             </div>
           </div>
 <a data-name="-1265333454%2FFunctions%2F1239919082" anchor-label="getChannelOrNull" id="-1265333454%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../dev.kord.core.behavior.interaction/-interaction-behavior/get-channel-or-null.html"><span>get</span><wbr><span>Channel</span><wbr><span>Or</span><wbr><span><span>Null</span></span></a></div>
@@ -395,7 +470,7 @@
             </div>
           </div>
 <a data-name="-1791898974%2FFunctions%2F1239919082" anchor-label="hashCode" id="-1791898974%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="hash-code.html"><span>hash</span><wbr><span><span>Code</span></span></a></div>
@@ -404,13 +479,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="hash-code.html"><span class="token function">hashCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="hash-code.html"><span class="token function">hashCode</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="44448039%2FFunctions%2F1239919082" anchor-label="suggest" id="44448039%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../dev.kord.core.behavior.interaction/suggest.html"><span><span>suggest</span></span></a></div>
@@ -419,13 +494,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../dev.kord.core.behavior.interaction/-auto-complete-interaction-behavior/index.html">AutoCompleteInteractionBehavior</a><span class="token punctuation">.</span><a href="../../dev.kord.core.behavior.interaction/suggest.html"><span class="token function">suggest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">choices<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../common/dev.kord.common.entity/-choice/index.html">Choice</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Responds to the interaction with <a href="../../dev.kord.core.behavior.interaction/suggest.html">choices</a> to this auto-complete request.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="../../dev.kord.core.behavior.interaction/-auto-complete-interaction-behavior/index.html">AutoCompleteInteractionBehavior</a><span class="token punctuation">.</span><a href="../../dev.kord.core.behavior.interaction/suggest.html"><span class="token function">suggest</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">choices<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="../../../common/dev.kord.common.entity/-choice/index.html">Choice</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Responds to the interaction with <a href="../../dev.kord.core.behavior.interaction/suggest.html">choices</a> to this auto-complete request.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1235043802%2FFunctions%2F1239919082" anchor-label="suggestInteger" id="1235043802%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../dev.kord.core.behavior.interaction/suggest-integer.html"><span>suggest</span><wbr><span><span>Integer</span></span></a></div>
@@ -434,13 +509,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../../dev.kord.core.behavior.interaction/-auto-complete-interaction-behavior/index.html">AutoCompleteInteractionBehavior</a><span class="token punctuation">.</span><a href="../../dev.kord.core.behavior.interaction/suggest-integer.html"><span class="token function">suggestInteger</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="../../../rest/dev.kord.rest.builder.interaction/-integer-option-builder/index.html">IntegerOptionBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Responds to the interaction with the integer choices specified by <a href="../../dev.kord.core.behavior.interaction/suggest-integer.html">builder</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../../dev.kord.core.behavior.interaction/-auto-complete-interaction-behavior/index.html">AutoCompleteInteractionBehavior</a><span class="token punctuation">.</span><a href="../../dev.kord.core.behavior.interaction/suggest-integer.html"><span class="token function">suggestInteger</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="../../../rest/dev.kord.rest.builder.interaction/-integer-option-builder/index.html">IntegerOptionBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Responds to the interaction with the integer choices specified by <a href="../../dev.kord.core.behavior.interaction/suggest-integer.html">builder</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1722035292%2FFunctions%2F1239919082" anchor-label="suggestNumber" id="-1722035292%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../dev.kord.core.behavior.interaction/suggest-number.html"><span>suggest</span><wbr><span><span>Number</span></span></a></div>
@@ -449,13 +524,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../../dev.kord.core.behavior.interaction/-auto-complete-interaction-behavior/index.html">AutoCompleteInteractionBehavior</a><span class="token punctuation">.</span><a href="../../dev.kord.core.behavior.interaction/suggest-number.html"><span class="token function">suggestNumber</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="../../../rest/dev.kord.rest.builder.interaction/-number-option-builder/index.html">NumberOptionBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Responds to the interaction with the number choices specified by <a href="../../dev.kord.core.behavior.interaction/suggest-number.html">builder</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../../dev.kord.core.behavior.interaction/-auto-complete-interaction-behavior/index.html">AutoCompleteInteractionBehavior</a><span class="token punctuation">.</span><a href="../../dev.kord.core.behavior.interaction/suggest-number.html"><span class="token function">suggestNumber</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="../../../rest/dev.kord.rest.builder.interaction/-number-option-builder/index.html">NumberOptionBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Responds to the interaction with the number choices specified by <a href="../../dev.kord.core.behavior.interaction/suggest-number.html">builder</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1140631032%2FFunctions%2F1239919082" anchor-label="suggestString" id="1140631032%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="../../dev.kord.core.behavior.interaction/suggest-string.html"><span>suggest</span><wbr><span><span>String</span></span></a></div>
@@ -464,13 +539,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../../dev.kord.core.behavior.interaction/-auto-complete-interaction-behavior/index.html">AutoCompleteInteractionBehavior</a><span class="token punctuation">.</span><a href="../../dev.kord.core.behavior.interaction/suggest-string.html"><span class="token function">suggestString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="../../../rest/dev.kord.rest.builder.interaction/-string-choice-builder/index.html">StringChoiceBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Responds to the interaction with the string choices specified by <a href="../../dev.kord.core.behavior.interaction/suggest-string.html">builder</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">inline suspend </span><span class="token keyword">fun </span><a href="../../dev.kord.core.behavior.interaction/-auto-complete-interaction-behavior/index.html">AutoCompleteInteractionBehavior</a><span class="token punctuation">.</span><a href="../../dev.kord.core.behavior.interaction/suggest-string.html"><span class="token function">suggestString</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">builder<span class="token operator">: </span><a href="../../../rest/dev.kord.rest.builder.interaction/-string-choice-builder/index.html">StringChoiceBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Responds to the interaction with the string choices specified by <a href="../../dev.kord.core.behavior.interaction/suggest-string.html">builder</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1970065039%2FFunctions%2F1239919082" anchor-label="toString" id="-1970065039%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="to-string.html"><span>to</span><wbr><span><span>String</span></span></a></div>
@@ -479,13 +554,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="to-string.html"><span class="token function">toString</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1358043635%2FFunctions%2F1239919082" anchor-label="withStrategy" id="-1358043635%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="with-strategy.html"><span>with</span><wbr><span><span>Strategy</span></span></a></div>
@@ -494,7 +569,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="with-strategy.html"><span class="token function">withStrategy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">strategy<span class="token operator">: </span><a href="../../dev.kord.core.supplier/-entity-supply-strategy/index.html">EntitySupplyStrategy</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">GlobalAutoCompleteInteraction</a></div><div class="brief "><p class="paragraph">Returns a copy of this class with a new <a href="supplier.html">supplier</a> provided by the <a href="with-strategy.html">strategy</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="with-strategy.html"><span class="token function">withStrategy</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">strategy<span class="token operator">: </span><a href="../../dev.kord.core.supplier/-entity-supply-strategy/index.html">EntitySupplyStrategy</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">GlobalAutoCompleteInteraction</a></div><div class="brief "><p class="paragraph">Returns a copy of this class with a new <a href="../../dev.kord.core.entity/-strategizable/supplier.html">supplier</a> provided by the <a href="../../dev.kord.core.entity/-strategizable/with-strategy.html">strategy</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -505,17 +580,21 @@
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 Copyright</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>

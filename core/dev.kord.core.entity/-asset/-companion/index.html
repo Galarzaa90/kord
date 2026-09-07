@@ -1,22 +1,22 @@
 <!doctype html>
-<html class="no-js">
+<html class="no-js" lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Companion</title>
-<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../../";</script>
-    <script>document.documentElement.classList.replace("no-js","js");</script>
+<link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>
+    <script>document.documentElement.classList.replace("no-js", "js");</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-    if (storage == null) {
+      if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    } else {
+      } else {
         const savedDarkMode = JSON.parse(storage)
-        if(savedDarkMode === true) {
-            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        if (savedDarkMode === true) {
+          document.getElementsByTagName("html")[0].classList.add("theme-dark")
         }
-    }
+      }
     </script>
 <script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
@@ -24,55 +24,85 @@
 <link href="../../../../styles/main.css" rel="Stylesheet">
 <link href="../../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../../styles/logo-styles.css" rel="Stylesheet">
-<link href="../../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <link href="../../../../ui-kit/ui-kit.min.css" rel="Stylesheet">
-<script type="text/javascript" src="../../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../../scripts/safe-local-storage_blocking.js"></script>
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
 <script type="text/javascript" src="../../../../scripts/prism.js" async></script>
-<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" async></script>
-<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
+<script type="text/javascript" src="../../../../ui-kit/ui-kit.min.js" defer></script></head>
 <body>
-    <div class="root">
-<nav class="navigation" id="navigation-wrapper">
-    <div class="navigation--inner">
-        <div class="navigation-title">
-            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
-            <div class="library-name">
-<a class="library-name--link" href="../../../../index.html">
-                            kord
-                    </a>            </div>
-            <div class="library-version">0.16.0-SNAPSHOT
+<div class="root">
+    <header class="navigation theme-dark" id="navigation-wrapper" role="banner">
+<a class="library-name--link" href="../../../../index.html" tabindex="1">
+                    kord
+            </a>        <button class="navigation-controls--btn navigation-controls--btn_toc ui-kit_mobile-only" id="toc-toggle" type="button">Toggle table of contents
+        </button>
+        <div class="navigation-controls--break ui-kit_mobile-only"></div>
+        <div class="library-version" id="library-version">or(map(map(map(map(valueof(ProcessOutputValueSource))))), map(map(map(map(valueof(ProcessOutputValueSource))))))
+        </div>
+        <div class="navigation-controls">
+        <ul class="filter-section filter-section_loading" id="filter-section" aria-label="Target filter">
+                <button class="platform-tag platform-selector common-like" data-active="" aria-pressed="true" data-filter=":core/commonMain">common</button>
+            <div class="dropdown filter-section--dropdown" data-role="dropdown" id="filter-section-dropdown">
+                <button class="button button_dropdown filter-section--dropdown-toggle" role="combobox" data-role="dropdown-toggle" aria-controls="platform-tags-listbox" aria-haspopup="listbox" aria-expanded="false" aria-label="Toggle source sets"></button>
+                <ul role="listbox" id="platform-tags-listbox" class="dropdown--list" data-role="dropdown-listbox" aria-label="Target filter">
+                    <div class="dropdown--header"><span>Target filter</span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close target filter">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                        <li role="option" class="dropdown--option platform-selector-option common-like" tabindex="0">
+                            <label class="checkbox">
+                                <input type="checkbox" class="checkbox--input" id=":core/commonMain" data-filter=":core/commonMain">
+                                <span class="checkbox--icon"></span>
+                                common
+                            </label>
+                        </li>
+                </ul>
+                <div class="dropdown--overlay"></div>
+            </div>
+        </ul>
+            <button class="navigation-controls--btn navigation-controls--btn_theme" id="theme-toggle-button" type="button">Switch theme
+            </button>
+            <div class="navigation-controls--btn navigation-controls--btn_search" id="searchBar" role="button">Search in
+                API
             </div>
         </div>
-        <div class="filter-section" id="filter-section">
-                <button class="platform-tag platform-selector common-like" data-active="" data-filter=":core/commonMain">common</button>
-        </div>
-    </div>
-    <div class="navigation-controls">
-        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
-        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
-    </div>
-</nav>
-        <div id="container">
-            <div class="sidebar" id="leftColumn">
-                <div class="sidebar--inner" id="sideMenu"></div>
+    </header>
+    <div id="container">
+        <nav id="leftColumn" class="sidebar" data-item-type="SECTION" data-item-config="{&quot;defaultSize&quot;: 280, &quot;minSize&quot;: 200, &quot;maxSize&quot;: 400}">
+            <a class="toc--skip-link" href="#main">Skip to content</a>
+            <div class="dropdown theme-dark_mobile" data-role="dropdown" id="toc-dropdown">
+                <ul role="listbox" id="toc-listbox" class="dropdown--list dropdown--list_toc-list" data-role="dropdown-listbox" aria-label="Table of contents">
+                    <div class="dropdown--header">
+                            <span>
+                                    kord
+                            </span>
+                        <button class="button" data-role="dropdown-toggle" aria-label="Close table of contents">
+                            <i class="ui-kit-icon ui-kit-icon_cross"></i>
+                        </button>
+                    </div>
+                    <div class="sidebar--inner" id="sideMenu"></div>
+                </ul>
+                <div class="dropdown--overlay"></div>
             </div>
-            <div id="main">
+        </nav>
+        <div id="resizer" class="resizer" data-item-type="BAR"></div>
+        <div id="main" data-item-type="SECTION" role="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="kord-core::dev.kord.core.entity/Asset.Companion///PointingToDeclaration//1239919082">
   <div class="breadcrumbs"><a href="../../../index.html">kord-core</a><span class="delimiter">/</span><a href="../../index.html">dev.kord.core.entity</a><span class="delimiter">/</span><a href="../index.html">Asset</a><span class="delimiter">/</span><span class="current">Companion</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Companion</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/kordlib/kord/blob/eaf5dbe1755a4b2005098c6a931465266fed0b65/core/src/commonMain/kotlin/entity/Asset.kt#L27">source</a>)</span></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">Companion</a><span class="source-link-wrapper"><span class="source-link" data-element-type="source-link">(<a href="https://github.com/kordlib/kord/blob/map(map(map(valueof(ProcessOutputValueSource))))/core/src/commonMain/kotlin/entity/Asset.kt#L28">source</a>)</span></span></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button></div>
     <div class="tabs-section-body">
       <div data-togglable="FUNCTION">
-        <h2 class="">Functions</h2>
+        <h2 class="tableheader">Functions</h2>
         <div class="table"><a data-name="-2111002810%2FFunctions%2F1239919082" anchor-label="applicationCover" id="-2111002810%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="application-cover.html"><span>application</span><wbr><span><span>Cover</span></span></a></div>
@@ -81,13 +111,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="application-cover.html"><span class="token function">applicationCover</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">applicationId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="application-cover.html"><span class="token function">applicationCover</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">applicationId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1847126478%2FFunctions%2F1239919082" anchor-label="applicationIcon" id="1847126478%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="application-icon.html"><span>application</span><wbr><span><span>Icon</span></span></a></div>
@@ -96,13 +126,28 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="application-icon.html"><span class="token function">applicationIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">applicationId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="application-icon.html"><span class="token function">applicationIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">applicationId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1755251788%2FFunctions%2F1239919082" anchor-label="avatarDecoration" id="1755251788%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="avatar-decoration.html"><span>avatar</span><wbr><span><span>Decoration</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1755251788%2FFunctions%2F1239919082"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="avatar-decoration.html"><span class="token function">avatarDecoration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-658486775%2FFunctions%2F1239919082" anchor-label="defaultUserAvatar" id="-658486775%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="default-user-avatar.html"><span>default</span><wbr><span>User</span><wbr><span><span>Avatar</span></span></a></div>
@@ -111,13 +156,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="default-user-avatar.html"><span class="token function">defaultUserAvatar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="default-user-avatar.html"><span class="token function">defaultUserAvatar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">discriminator<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="default-user-avatar.html"><span class="token function">defaultUserAvatar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div><div class="symbol monospace"><span class="token keyword">fun </span><a href="default-user-avatar.html"><span class="token function">defaultUserAvatar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">discriminator<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="646839326%2FFunctions%2F1239919082" anchor-label="emoji" id="646839326%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="emoji.html"><span><span>emoji</span></span></a></div>
@@ -126,13 +171,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emoji.html"><span class="token function">emoji</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">emojiId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">isAnimated<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="emoji.html"><span class="token function">emoji</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">emojiId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">isAnimated<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1022651108%2FFunctions%2F1239919082" anchor-label="guildBanner" id="1022651108%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="guild-banner.html"><span>guild</span><wbr><span><span>Banner</span></span></a></div>
@@ -141,13 +186,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-banner.html"><span class="token function">guildBanner</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-banner.html"><span class="token function">guildBanner</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="793396739%2FFunctions%2F1239919082" anchor-label="guildDiscoverySplash" id="793396739%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="guild-discovery-splash.html"><span>guild</span><wbr><span>Discovery</span><wbr><span><span>Splash</span></span></a></div>
@@ -156,13 +201,28 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-discovery-splash.html"><span class="token function">guildDiscoverySplash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-discovery-splash.html"><span class="token function">guildDiscoverySplash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-1508869884%2FFunctions%2F1239919082" anchor-label="guildHomeHeader" id="-1508869884%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="guild-home-header.html"><span>guild</span><wbr><span>Home</span><wbr><span><span>Header</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1508869884%2FFunctions%2F1239919082"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../../common/dev.kord.common.annotation/-discord-a-p-i-preview/index.html"><span class="token annotation builtin">DiscordAPIPreview</span></a></div></div><span class="token keyword">fun </span><a href="guild-home-header.html"><span class="token function">guildHomeHeader</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1813844111%2FFunctions%2F1239919082" anchor-label="guildIcon" id="-1813844111%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="guild-icon.html"><span>guild</span><wbr><span><span>Icon</span></span></a></div>
@@ -171,13 +231,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-icon.html"><span class="token function">guildIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-icon.html"><span class="token function">guildIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1159735510%2FFunctions%2F1239919082" anchor-label="guildScheduledEventCover" id="1159735510%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="guild-scheduled-event-cover.html"><span>guild</span><wbr><span>Scheduled</span><wbr><span>Event</span><wbr><span><span>Cover</span></span></a></div>
@@ -186,13 +246,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-scheduled-event-cover.html"><span class="token function">guildScheduledEventCover</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">eventId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-scheduled-event-cover.html"><span class="token function">guildScheduledEventCover</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">eventId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1861147231%2FFunctions%2F1239919082" anchor-label="guildSplash" id="1861147231%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="guild-splash.html"><span>guild</span><wbr><span><span>Splash</span></span></a></div>
@@ -201,13 +261,28 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-splash.html"><span class="token function">guildSplash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="guild-splash.html"><span class="token function">guildSplash</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="1021716513%2FFunctions%2F1239919082" anchor-label="guildTagBadge" id="1021716513%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="guild-tag-badge.html"><span>guild</span><wbr><span>Tag</span><wbr><span><span>Badge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1021716513%2FFunctions%2F1239919082"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation builtin">@</span><a href="../../../../common/dev.kord.common.annotation/-discord-a-p-i-preview/index.html"><span class="token annotation builtin">DiscordAPIPreview</span></a></div></div><span class="token keyword">fun </span><a href="guild-tag-badge.html"><span class="token function">guildTagBadge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1189216926%2FFunctions%2F1239919082" anchor-label="memberAvatar" id="-1189216926%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="member-avatar.html"><span>member</span><wbr><span><span>Avatar</span></span></a></div>
@@ -216,13 +291,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="member-avatar.html"><span class="token function">memberAvatar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="member-avatar.html"><span class="token function">memberAvatar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-619128913%2FFunctions%2F1239919082" anchor-label="memberBanner" id="-619128913%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="member-banner.html"><span>member</span><wbr><span><span>Banner</span></span></a></div>
@@ -231,13 +306,28 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="member-banner.html"><span class="token function">memberBanner</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="member-banner.html"><span class="token function">memberBanner</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-525248604%2FFunctions%2F1239919082" anchor-label="nameplate" id="-525248604%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="nameplate.html"><span><span>nameplate</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-525248604%2FFunctions%2F1239919082"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="nameplate.html"><span class="token function">nameplate</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-374743026%2FFunctions%2F1239919082" anchor-label="roleIcon" id="-374743026%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="role-icon.html"><span>role</span><wbr><span><span>Icon</span></span></a></div>
@@ -246,13 +336,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="role-icon.html"><span class="token function">roleIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">roleId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="role-icon.html"><span class="token function">roleIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">roleId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-101544261%2FFunctions%2F1239919082" anchor-label="sticker" id="-101544261%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="sticker.html"><span><span>sticker</span></span></a></div>
@@ -267,7 +357,7 @@
             </div>
           </div>
 <a data-name="1428598764%2FFunctions%2F1239919082" anchor-label="stickerPackBanner" id="1428598764%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="sticker-pack-banner.html"><span>sticker</span><wbr><span>Pack</span><wbr><span><span>Banner</span></span></a></div>
@@ -281,8 +371,23 @@
               </div>
             </div>
           </div>
+<a data-name="1725749672%2FFunctions%2F1239919082" anchor-label="tagBadge" id="1725749672%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="tag-badge.html"><span>tag</span><wbr><span><span>Badge</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1725749672%2FFunctions%2F1239919082"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="tag-badge.html"><span class="token function">tagBadge</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guildId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
 <a data-name="931060661%2FFunctions%2F1239919082" anchor-label="teamIcon" id="931060661%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="team-icon.html"><span>team</span><wbr><span><span>Icon</span></span></a></div>
@@ -291,13 +396,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="team-icon.html"><span class="token function">teamIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">teamId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="team-icon.html"><span class="token function">teamIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">teamId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="557589379%2FFunctions%2F1239919082" anchor-label="userAvatar" id="557589379%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="user-avatar.html"><span>user</span><wbr><span><span>Avatar</span></span></a></div>
@@ -306,28 +411,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="user-avatar.html"><span class="token function">userAvatar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
-<a data-name="541505299%2FFunctions%2F1239919082" anchor-label="userAvatarDecoration" id="541505299%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="user-avatar-decoration.html"><span>user</span><wbr><span>Avatar</span><wbr><span><span>Decoration</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="541505299%2FFunctions%2F1239919082"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="user-avatar-decoration.html"><span class="token function">userAvatarDecoration</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="user-avatar.html"><span class="token function">userAvatar</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-615295082%2FFunctions%2F1239919082" anchor-label="userBanner" id="-615295082%2FFunctions%2F1239919082" data-filterable-set=":core/commonMain"></a>
-          <div class="table-row" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
+          <div class="table-row table-row_content" data-filterable-current=":core/commonMain" data-filterable-set=":core/commonMain">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="user-banner.html"><span>user</span><wbr><span><span>Banner</span></span></a></div>
@@ -336,7 +426,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="user-banner.html"><span class="token function">userBanner</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":core/commonMain"><div class="symbol monospace"><span class="token keyword">fun </span><a href="user-banner.html"><span class="token function">userBanner</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">userId<span class="token operator">: </span><a href="../../../../common/dev.kord.common.entity/-snowflake/index.html">Snowflake</a><span class="token punctuation">, </span></span><span class="parameter ">hash<span class="token operator">: </span><a href="https://kotlinlang.org/api/core/kotlin-stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">kord<span class="token operator">: </span><a href="../../../dev.kord.core/-kord/index.html">Kord</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../index.html">Asset</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -347,17 +437,21 @@
   </div>
 </div>
     <div class="footer">
-        <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
-        <span>© 2025 Copyright</span>
-        <span class="pull-right">
-            <span>Generated by </span>
-            <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
-                <span>dokka</span>
-            </a>
-        </span>
-    </div>
+        <div class="footer--container">
+            <a href="#content" id="go-to-top-link" class="footer--button footer--button_go-to-top"></a>
+            <div class="footer--content">
+                <div>
+                    <span>Generated by </span>
+                    <a class="footer--link footer--link_external" href="https://github.com/Kotlin/dokka">
+                        Dokka
+                    </a>
+                    <div>© 2026 Copyright</div>
+                </div>
             </div>
         </div>
     </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
